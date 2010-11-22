@@ -9,3 +9,10 @@ Library prettier
   Path:       src
   BuildTools: ocamlbuild
   Modules:    Prettier
+
+Executable ex_simple
+  Install: false
+  BuildTools: ocamlbuild
+  Path: example
+  MainIs: simple.ml
+  BuildDepends: prettier
