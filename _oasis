@@ -1,0 +1,11 @@
+OASISFormat: 0.2
+Name:        prettier
+Version:     0.1
+Synopsis:    Wadler's pretty printer
+Authors:     MT
+License:     BSD3
+
+Library prettier
+  Path:       src
+  BuildTools: ocamlbuild
+  Modules:    Prettier
