@@ -4,22 +4,28 @@ Version:     0.1
 Synopsis:    Wadler's pretty printer
 Authors:     MT
 License:     BSD3
+BuildTools: ocamlbuild
 
 Library prettier
     Path:       src
-    BuildTools: ocamlbuild
     Modules:    Prettier
+
+Document prettier
+    Title:                API reference for prettier
+    Type:                 ocamlbuild
+    InstallDir:           $htmldir/prettier
+    BuildTools+:          ocamldoc
+    XOCamlbuildPath:      src
+    XOCamlbuildLibraries: prettier
 
 Executable simple
     Install: false
-    BuildTools: ocamlbuild
     Path: example
     MainIs: simple.ml
     BuildDepends: prettier
 
 Executable basic
     Install: false
-    BuildTools: ocamlbuild
     Path: test
     MainIs : basic.ml
     BuildDepends: oUnit, prettier
