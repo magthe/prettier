@@ -25,6 +25,12 @@ Executable simple
     MainIs: simple.ml
     BuildDepends: prettier
 
+Executable iter
+    Install: false
+    Path: example
+    MainIs: iter.ml
+    BuildDepends: prettier
+
 Executable basic
     Install: false
     Path: test
