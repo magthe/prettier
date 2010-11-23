@@ -4,3 +4,4 @@ setup.*
 *.odocl
 *.docdir
 myocamlbuild.ml
+META

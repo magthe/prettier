@@ -4,7 +4,8 @@ Version:     0.1
 Synopsis:    Wadler's pretty printer
 Authors:     MT
 License:     BSD3
-BuildTools: ocamlbuild
+BuildTools:  ocamlbuild
+Plugins:     META
 
 Library prettier
     Path:       src
