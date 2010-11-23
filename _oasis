@@ -6,13 +6,22 @@ Authors:     MT
 License:     BSD3
 
 Library prettier
-  Path:       src
-  BuildTools: ocamlbuild
-  Modules:    Prettier
+    Path:       src
+    BuildTools: ocamlbuild
+    Modules:    Prettier
 
-Executable ex_simple
-  Install: false
-  BuildTools: ocamlbuild
-  Path: example
-  MainIs: simple.ml
-  BuildDepends: prettier
+Executable simple
+    Install: false
+    BuildTools: ocamlbuild
+    Path: example
+    MainIs: simple.ml
+    BuildDepends: prettier
+
+Executable basic
+    Install: false
+    BuildTools: ocamlbuild
+    Path: test
+    MainIs : basic.ml
+    BuildDepends: oUnit, prettier
+
+# vim: set expandtab :
