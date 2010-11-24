@@ -52,9 +52,6 @@ val line : pdoc
 (** Combine two documents *)
 val concat : pdoc -> pdoc -> pdoc
 
-(** Short for {!concat} *)
-val ( <|> ) : pdoc -> pdoc -> pdoc
-
 (** Nest a document with indentation
 	@param indent The level of indentation
 	@param doc The document
@@ -64,3 +61,22 @@ val nest : int -> pdoc -> pdoc
 
 (** Convert a document to a string *)
 val layout : pdoc -> string
+
+(** {2 Convenience functions} *)
+(** Infix operator version of {!concat} *)
+val ( <|> ) : pdoc -> pdoc -> pdoc
+
+(** Short for [List.map text ss]. *)
+val texts : string list -> pdoc list
+
+(** Short for [line <|> text s]. *)
+val ltext : string -> pdoc
+
+(** Short for [text s <|> line]. *)
+val textl : string -> pdoc
+
+(** Concatenate all the documents in a list *)
+val fold : pdoc list -> pdoc
+
+(** Concatenate all documents in a list, each prepended by [line] *)
+val lfold : pdoc list -> pdoc

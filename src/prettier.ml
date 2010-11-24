@@ -49,3 +49,13 @@ let rec layout d = match d with
 	| PNil -> ""
 	| PText (s, e) -> s ^ layout e
 	| PLine (i, e) -> "\n" ^ (String.make i ' ') ^ (layout e)
+
+let texts = List.map text
+
+let ltext s = line <|> text s
+
+let textl s = text s <|> line
+
+let fold = List.fold_left concat nil
+
+let lfold = List.fold_left (fun l r -> l <|> line <|> r) nil
