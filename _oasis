@@ -20,21 +20,27 @@ Document prettier
     XOCamlbuildLibraries: prettier
 
 Executable simple
-    Install: false
-    Path: example
-    MainIs: simple.ml
+    Install:      false
+    Path:         example
+    MainIs:       simple.ml
     BuildDepends: prettier
 
 Executable iter
-    Install: false
-    Path: example
-    MainIs: iter.ml
+    Install:      false
+    Path:         example
+    MainIs:       iter.ml
     BuildDepends: prettier
 
+# Tests
 Executable basic
-    Install: false
-    Path: test
-    MainIs : basic.ml
+    Install:      false
+    Path:         test
+    MainIs :      basic.ml
     BuildDepends: oUnit, prettier
+
+Test "basic"
+    Type:             Custom
+    Command:          $basic
+    WorkingDirectory: test
 
 # vim: set expandtab :
